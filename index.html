@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="normalize" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="normalize"
+        href="styles/normalize.css">
+    <link rel="stylesheet"
+        href="styles/style.css">
     <title>Acme Web Solutions</title>
 </head>
 
@@ -17,12 +21,18 @@
             <p class="header__subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum
                 soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
             <div class="link">
-                <a class="link link-button" href="#" target="_blank">Read More</a>
+                <!-- The block is called link, so the anchor tag should be formatted as an element of that block -->
+                <!-- Is link-button a modifier? If so, it should be using an underscore -->
+                <a class="link link-button"
+                    href="#"
+                    target="_blank">Read More</a>
             </div>
         </header>
         <main>
             <section class="content">
                 <h2 class="content__title">Web & Application Development</h2>
+                <!-- Modifier looks a lot better! -->
+                <!-- You are already using the content block above, the element has to match the modifier because the modifier can't be describing an element to modify without the base class for that element.  In this case, I would change "content" to "content__text" -->
                 <p class="content content__text_columns">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint
                     eligendi
                     possimus? Unde officiis magnam laborum ipsa
@@ -32,10 +42,12 @@
                     sequi animi totam, accusantium, ex eius quia, natus quo?</p>
             </section>
             <section class="cards">
+                <!-- Can't use the "cards" block again.  You are using a modifier called "cards__list_no-bullets", so that should be modifying an element called "cards__list", but that is not found on this element -->
                 <ul class="cards cards__list_no-bullets">
                     <li>
                         <div class="cards__content">
-                            <img src="/images/computer.jpeg" alt="computer image">
+                            <img src="/images/computer.jpeg"
+                                alt="computer image">
                             <h3 class="cards__title">
                                 Web Development
                             </h3>
@@ -48,7 +60,9 @@
                     </li>
                     <li>
                         <div class="cards__content">
-                            <img src="/images/phone.jpeg" alt="">
+                            <!-- Missing alt description -->
+                            <img src="/images/phone.jpeg"
+                                alt="">
                             <h3 class="cards__title">
                                 Mobile Applications
                             </h3>
@@ -61,7 +75,9 @@
                     </li>
                     <li>
                         <div class="cards__content">
-                            <img src="/images/computer-and-tablet.jpeg" alt="">
+                            <!-- Missing alt description -->
+                            <img src="/images/computer-and-tablet.jpeg"
+                                alt="">
                             <h3 class="cards__title">
                                 Tech Marketing
                             </h3>
@@ -82,6 +98,7 @@
                     voluptatum nisi.</p>
             </section>
             <section class="boxes">
+                <!-- Can't use a block "boxes" inside of "boxes".  You need to define a element name for this. -->
                 <div class="boxes boxes_first">
                     <h2 class="content__title">
                         Contact us
@@ -89,8 +106,10 @@
                     <p class="content__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit.
                         Rerum ducimus a quod, ut et voluptas obcaecatiunde fuga.
                         <span>
+                            <!-- Nice job on the mailto link -->
                             <a class="link"
-                                href="mailto:contact@acmewebsolutions.test">contact@acmewebsolutions.test</a></span>
+                                href="mailto:contact@acmewebsolutions.test">contact@acmewebsolutions.test</a>
+                        </span>
 
                     </p>
                 </div>
@@ -106,10 +125,13 @@
                     </p>
                 </div>
             </section>
+            <!-- The footer tag would probably be better here -->
             <section class="footer">
+                <!-- I would use a p tag here -->
                 <div>Acme Web Solutions</div>
                 <div>Project by <span>
-                        <a style="color:#2D90D4;" class="link"
+                        <a style="color:#2D90D4;"
+                            class="link"
                             href="https://github.com/tHALL3000/landing-page-project">tHALL3000</a></span>
             </section>
         </main>

@@ -7,10 +7,12 @@
     display: block;
     margin: 0 auto;
     padding: 0;
+    /* This background color is overriding the white background where it needs to be.  Compare your project to this so you can see: https://jolly-kalam-23776e.netlify.app/cssgridresponsive/ */
     background-color: #333333;
 }
 
 .header {
+    /* remove border */
     border: red 1px solid;
     margin: 0;
     padding-top: 100px;
@@ -109,6 +111,7 @@
 
 
 .cards {
+    /* The cards are stretched across the screen and need to look like the brief (https://jolly-kalam-23776e.netlify.app/cssgridresponsive/).  Perhaps adding a max-width might help. */
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -124,7 +127,9 @@
     padding: 0;
 }
 
+/* Styling elements with the tag name is not BEM compliant.  You need to use a class for these styles */
 img {
+    /* With images, it's best to specify only a height OR a width.  If you do both, you can distort the image. */
     width: 100%;
     height: 275px;
 }
@@ -153,6 +158,7 @@ img {
     padding: 0;
     width: 100%;
     height: 250px;
+    /* Remove border */
     border: peru 1px solid;
     color: #fff;
 }
@@ -164,6 +170,7 @@ img {
     margin: 0;
     padding: 20px;
     line-height: 1.5em;
+    /* Instead of using floats, we want boxes_first and boxes_second to take up the whole space next to each other. */
     float: left;
 }
 
